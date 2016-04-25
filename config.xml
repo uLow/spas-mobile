@@ -9,8 +9,6 @@
     </author>
   <content src="index.html"/>
   <access origin="*"/>
-  <uses-permission android:name="android.permission.INTERNET" />
-  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
   <preference name="DisallowOverscroll" value="true"/>
@@ -68,6 +66,8 @@
     <splash src="resources\android\splash\drawable-port-xhdpi-screen.png" density="port-xhdpi"/>
     <splash src="resources\android\splash\drawable-port-xxhdpi-screen.png" density="port-xxhdpi"/>
     <splash src="resources\android\splash\drawable-port-xxxhdpi-screen.png" density="port-xxxhdpi"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
   </platform>
   <platform name="wp8">
     <icon src="resources\wp8\icon\ApplicationIcon.png" width="99" height="99"/>
