@@ -1,0 +1,48 @@
+.scroll {
+    height: 100%;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+ion-item.item.activated, .item .item-content.activated {
+    background-color: transparent;
+}
+ion-list.ambulances ion-item.activated {
+    border-color: #ddd;
+}
+
+ion-list.ambulances .ng-hide-remove {
+    animation: 0.4s slideDown ease;
+}
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.status0{
+    background-color: #fff;
+}
+.status4{
+    background-color: rgba(56, 143, 245, 0.1);
+}
+.status5{
+    background-color: rgba(0, 255, 0, 0.1);
+}
+.status6{
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+
+
+ion-list.call-history a.item-content {
+    background-color: transparent;
+}
