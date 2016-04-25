@@ -1,0 +1,56 @@
+<ion-view view-title="Ambulance list">
+    <ion-content class="padding">
+        <ion-list class="ambulances">
+            <ion-item ng-repeat="item in ambulances"
+                      ng-click="showCallMenu(item.ambulance.ambulance_id)" class="item-avatar">
+                <img ng-src="{{item.company.avatar_data}}"
+                     style="border: 1px solid #eee; padding: 4px; background-color: #fefefe;">
+                <b class="companyName" style="font-size: 13px;">{{item.company.name}}</b>
+
+                <span class="item-note" style="font-size: 12px;">
+                  {{item.ambulance.distance}}km
+                </span>
+
+                <div class="block" style="margin-top: 4px; font-size: 13px;">
+                    {{item.ambulance.name}}
+
+                    <div class="item-note">
+                        ~{{getHoursToArrive(item.ambulance.time_distance)}}
+                        {{getMinutesToArrive(item.ambulance.time_distance)}}
+                    </div>
+                </div>
+
+                <div class="call" ng-show="isCallMenuVisible(item.ambulance.ambulance_id)"
+                     style="margin-top: 4px; padding: 4px; border-top: 1px solid #ccc;">
+                    <div class="inline">
+                        <div>
+                            <button class="button button-small button-bar button-balanced icon icon-left ion-ios-telephone"
+                                    style="margin-top: 4px;"
+                                    ng-click="requestCall($event, item.ambulance.ambulance_id)">
+                                Request call
+                            </button>
+                        </div>
+                        <div>
+                            <button class="button button-small button-bar button-positive icon icon-left ion-map"
+                                    style="margin-top: 4px;" ng-click="showOnMap($event)">View on map
+                            </button>
+                        </div>
+                        <div>
+                            <button class="button button-small button-bar button-calm icon icon-left ion-star"
+                                    style="margin-top: 4px;" ng-click="test($event)">Send review
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <div class="item-note padding-top text-right">
+                        Cost: 13.26 &euro;
+                        <br>
+                        Rating: <i ng-repeat="i in [1,2,3,4,5]" class="icon"
+                                   ng-class="getRatingClass(item.rating, i)"></i>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

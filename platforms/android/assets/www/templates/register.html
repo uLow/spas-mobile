@@ -1,0 +1,33 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-stable">
+        <h1 class="title">Registration</h1>
+        <button class="button button-bar-inline button-outline" ng-click="closeRegisterModal()">Close</button>
+    </ion-header-bar>
+    <ion-content class="padding">
+        <div class="list list-inset">
+            <label class="item item-input">
+                <input type="text" placeholder="Username" ng-model="data.login" ng-required="true">
+            </label>
+            <label class="item item-input">
+                <input type="password" placeholder="Password" ng-model="data.password" ng-required="true">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="Name" ng-model="data.name" ng-required="true">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="Surname" ng-model="data.surname" ng-required="true">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="Address" ng-model="data.address" ng-required="true">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="E-mail" ng-model="data.email" ng-required="true">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="Phone" ng-model="data.phone" ng-required="true">
+            </label>
+        </div>
+        <button class="button button-block button-balanced" ng-click="doRegister(data)">Register</button>
+        <button class="button button-block button-positive" ng-click="closeRegisterModal()">Return to login page</button>
+    </ion-content>
+</ion-modal-view>

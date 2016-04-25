@@ -1,0 +1,11 @@
+<ion-view view-title="Call history">
+  <ion-content>
+    <ion-list class="call-history">
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-class="'status' + item.call.status" ng-repeat="item in calls" type="item-text-wrap" href="#/tab/call-details/{{item.call.call_id}}">
+        <img ng-src="{{item.company.avatar_data}}" style="border: 1px solid #eee; padding: 4px; background-color: #fefefe;">
+        <h2>{{item.company.name}} :: {{item.ambulance.name}}</h2>
+        <p>{{item.call.dt_created * 1000 | date: 'dd.MM.yyyy HH:mm:ss'}} - {{item.status}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
